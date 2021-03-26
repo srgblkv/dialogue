@@ -1,0 +1,48 @@
+$default-color: #5677ad;
+$green-color: #20bd5f;
+$gray-color: #f2f2f2;
+
+.button {
+  cursor: pointer;
+  background: $default-color;
+  color: #fff;
+  border: 0;
+  height: 48px;
+  padding: 0 30px;
+  border-radius: 30px;
+  font-size: 18px;
+
+  &:disabled,
+  &:disabled:hover {
+    background: #cdcbc4;
+    cursor: default;
+  }
+
+  &:hover {
+    background: lighten($default-color, 2%);
+  }
+
+  &:active {
+    background: darken($default-color, 1%);
+    transform: translateY(1px);
+  }
+
+  .buttonGreen {
+    background: $green-color;
+
+    &:hover,
+    &:active {
+      background: darken($green-color, 2%);
+    }
+  }
+
+  .buttonGray {
+    background: $gray-color;
+    color: #323232;
+
+    &:hover,
+    &:active {
+      background: darken($gray-color, 2%);
+    }
+  }
+}
